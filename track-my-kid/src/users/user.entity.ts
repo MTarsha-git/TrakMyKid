@@ -8,6 +8,6 @@ export class UserEntity{
     phoneNumber: string;
     city: string;
     street: string;
-    birthDay: Date;
+    birthDay: string;
     roleId: number;
 }

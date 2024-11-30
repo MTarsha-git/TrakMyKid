@@ -1,12 +1,25 @@
+import { IsDate, IsEmail, IsNumber, IsString } from "class-validator";
+
 export class CreateUserDto{
+    @IsString()
     readonly firstName: string;
-    lastName: string;
-    email: string;
-    password: string;
-    picture: string;
-    phoneNumber: string;
-    city: string;
-    street: string;
-    birthDay: Date;
-    roleId: number;
+    @IsString()
+    readonly lastName: string;
+    @IsEmail()
+    readonly email: string;
+    @IsString()
+    readonly password: string;
+    @IsString()
+    readonly picture: string;
+    @IsString()
+    readonly phoneNumber: string;
+    @IsString()
+    readonly city: string;
+    @IsString()
+    readonly street: string;
+    //@IsDate()
+    @IsString()
+    readonly birthDay: string;
+    @IsNumber()
+    readonly roleId: number;
 }
